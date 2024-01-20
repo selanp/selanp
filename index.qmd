@@ -1,0 +1,145 @@
+---
+title: "Melihat hubungan antara ekspor kopi dan ketersediaan dalam negeri tahun 2022"
+subtitle: "Metode Penelitian Politeknik APP Jakarta"
+author: "Sela Nopitriyani"
+date: 2024-01-19
+number-sections: true
+format:
+  html: default
+  docx: default
+---
+
+![](poltekapp.jpg)
+
+## Pendahuluan
+
+### Latar belakang
+
+Komoditi Perkebunan yang paling menguntungkan secara ekonomi dan berperan penting sebagai sumber utama devisa negara diantara hasil perkebunan lainnya salah satunya adalah Kopi. Lebih dari lima puluh juta petani kopi di Indonesia menghasilkan uang dari bisnis ini. Kopi memainkan peran penting sebagai sumber devisa, dan lebih dari satu setengah juta petani menghasilkan uang dari bisnis ini (Rahardjo 7: 2012). Kopi juga merupakan kebutuhan yang mempunyai manfaat pada kesehatan, seperti meningkatkan stamina, mengatasi sakit kepala, melegakan nafas, dan mengurangi risiko diabetes (Budiman, 45: 2012). Indonesia adalah salah satu sumber kopi paling beragam di dunia, negara ini bersaing di urutan keempat dari negara-negara penghasil komoditas terbesar, di belakang Brazil, Vietnam, dan Kamboja (Santoso, 2022). Sebagian besar kopi yang diproduksi di Indonesia dijual untuk ekspor, dan bagian yang tersisa digunakan untuk memenuhi permintaan kopi dalam negeri. Kopi Indonesia menyumbang ekspor ke banyak negara, seperti Amerika Serikat, Jepang, Jerman, Italia, dan Malaysia.. Hingga tahun 2020, 32 daerah telah terdaftar sebagai produk Indikasi Geografis di Kementerian Hukum dan HAM Republik Indonesia, termasuk Sumatra, yang memberikan perbedaan sebagai produk kopi spesifik pada pasar.
+
+### Ruang lingkup
+
+Berdasarkan data ekspor kopi tahun 2022 dari Badan Pusat Statistik kita dapat melihat bahwa partner dagang utama dari Indonesia untuk komoditas kopi adalah Amerika Serikat yang telah menjadi pasar ekspor kopi terbesar dalam lima tahun terakhir, kemudian disusul oleh negara Jerman dan Mesir yang merupakan pasar utama lainnya untuk kopi dengan peningkatannya yang signifikan, lalu disusul oleh dua negara terakhir yaitu Jepang dan Malaysia yang juga merupakan negara-negara tujuan ekspor kopi yang signifikan meskipun adanya variasi dalam nilai ekspor dari tahun ke tahun.
+
+### Rumusan masalah
+
+1.  Apakah dampak ekspor kopi Indonesia terhadap jumlah ketersediaan di dalam negeri?
+2.  Bagaimana kopi Indonesia membedakan dirinya di pasar global?
+
+### Tujuan dan manfaat penelitian
+
+Tujuan penelitian ini untuk mengidentifikasi dampak ekspor kopi Indonesia terhadap ketersediaan dalam negeri di beberapa provinsi penghasil kopi terbesar tahun 2022. Sebagai salah satu industri kopi dengan tingkat keberagaman di dunia, Indonesia memiliki potensi besar untuk mengambil keuntungan dari pasar Amerika Serikat dan 10 negara tujuan ekspor lainnya, yang pada saat ini menjadi salah satu pasar kopi terbesar di dunia. Selain itu, penelitian ini akan mencari jawaban atas pertanyaan tentang bagaimana kopi Indonesia membedakan dirinya di pasar global, terutama melalui praktik tani berkelanjutan, keanekaragaman varietas kopi, dan asal geografis yang membedakan. Manfaat penelitian ini untuk memberikan pemahaman yang lebih baik tentang bagaimana ekspor kopi Indonesia dapat berdampak positif pada pertumbuhan ekonomi negara, menjadikannya sebagai sumber devisa yang penting, baik untuk tujuan jangka pendek maupun jangka panjang.
+
+### Package
+
+Ini tidak wajib ada di Packages yang digunakan antara lain sebagai berikut:
+
+```{r}
+library("tidyverse")
+library("readxl")
+library("dplyr")
+```
+
+## Studi pustaka
+
+Menurut Anggi Pratama Manik (2023), menemukan bahwa nilai tukar, harga kopi, harga gula, harga kakao, harga teh, dan harga minyak kelapa sawit adalah faktor yang mempengaruhi jumlah kopi yang diekspor dari Indonesia. Harga kopi dan nilai tukar berdampak positif dan signifikan terhadap volume kopi yang diekspor; sebaliknya, harga gula, teh, dan minyak kelapa sawit memiliki dampak negatif dan signifikan terhadap volume kopi yang diekspor. Penelitian tambahan menunjukkan bahwa volume produksi, harga kopi, nilai kopi di Brazil, dan penjualan kopi ke Amerika Serikat dari Indonesia dipengaruhi secara signifikan oleh GDP Amerika Serikat.
+
+Seiring berkembangnya zaman, meningkatnya peminat kopi juga dipicu oleh pentingnya industri kopi dalam ekonomi global dan dampaknya terhadap lingkungan. Menghadapi kesadaran yang semakin tumbuh mengenai pentingnya keberlanjutan dan dampak lingkungan, berbagai macam jenis kopi telah muncul sebagai sebuah pilihan yang semakin menarik. Kopi organik tidak sekadar mewakili produk pertanian konvensional, ini adalah perwujudan dari pendekatan yang lebih komprehensif terhadap budidaya dan produksi kopi. Keputusan untuk beralih ke metode pertanian organik mencerminkan pemahaman akan tantangan yang dihadapi oleh industri kopi dalam konteks keberlanjutan lingkungan dan kesejahteraan petani. Oleh karena itu, kopi telah menjadi semacam contoh dalam upaya menciptakan praktik pertanian yang lebih bertanggung jawab
+
+## Metode penelitian
+
+### Data
+
+Data yang saya gunakan berupa nilai ekspor 10 negara tujuan ekspor kopi Indonesia dan data ketersediaan kopi di 10 Provinsi penghasil terbesar nasional Indonesia tahun 2022.
+
+| Negara          | eks     |
+|-----------------|---------|
+| Jepang          | 590873  |
+| Singapura       | 207443  |
+| Malaysia        | 531342  |
+| India           | 716534  |
+| Mesir           | 817323  |
+| Maroko          | 182126  |
+| Aljazair        | 257230  |
+| Amerika Serikat | 2685542 |
+| Inggris         | 482597  |
+| Jerman          | 809390  |
+
+| Provinsi            | kdn   |
+|---------------------|-------|
+| Sumatera Selatan    | 212.4 |
+| Lampung             | 124.5 |
+| Sumatera Utara      | 87    |
+| Aceh                | 75.3  |
+| Bengkulu            | 60.1  |
+| Jawa Timur          | 45.8  |
+| Sulawesi Selatan    | 29.4  |
+| Jawa Tengah         | 26.9  |
+| Nusa Tenggara Timur | 26.6  |
+| Jambi               | 19.5  |
+
+: Penelitian ini menggunakan data ekspor kopi tahun 2022 dari Badan Pusat Statistik dan data ketersediaan kopi dalam negeri dari infografis Indonesia.
+
+```{r}
+#import dataset
+library("readxl")
+dat<-read_excel('dat.xlsx')
+head(dat)
+```
+
+```{r}
+library("ggplot2")
+library("readxl")
+library("dplyr")
+ggplot(data=dat,aes(x=eks,y=kdn)) +
+  geom_point(color="blue",size=2) + 
+  labs(title="tabel 1. Hubungan antara ekspor kopi indonesia terhadap ketersediaan dalam negeri tahun 2022",
+       x="ekspor kopi indonesia",
+       y="ketersediaan dalam negeri",
+       caption = "sumber: Badan Pusat Statistik dan infografis indonesia") +
+  theme_classic()
+```
+
+### Metode analisis
+
+Metode yang dipilih adalah regresi univariat atau Ordinary Least Square (OLS) dengan 1 variabel independen. Penelitian ini merbaksud mencari hubungan antara hwy dan cty. Spesifikasi yang dilakukan adalah:
+
+$$
+y_{t}=\beta_0 + \beta_1 x_t+\mu_t
+$$ di mana $y_t$ adalah hwy dan $x_t$ adalah cty.
+
+## Pembahasan
+
+### Pembahasan masalah
+
+Dikarenakan penelitian ini menggunakan OLS, maka pembahasan disini hanya menghubungkan pengaruh ekspor kopi indonesia terhadap ketersediaan dala =m negeri 2022. data tersebut saya satukan untuk saya regresi dan tampilannya seperti ini.
+
+```{r}
+#import dataset
+library('readxl')
+data<-('dat.xlsx')
+head(dat)
+```
+
+### Analisis masalah
+
+```{r}
+reg1<-lm(eks~kdn,data=dat)
+summary(reg1)
+```
+
+## Kesimpulan
+
+Dalam penelitian ini, menurut hasil analisis, kopi Indonesia memiliki potensi besar di pasar Amerika Serikat. Negara tersebut menjadi salah satu negara dengan minat kopi yang paling banyak, dengan konsumen Amerika yang semakin menghargai berbagai bentuk kopi terutama kopi organik karena kesadaran akan manfaat kesehatan dan lingkungan. Faktor-faktor seperti praktik pertanian organik, keragaman varietas kopi, dan asal geografis Indonesia memberikan keunggulan kompetitif bagi kopi Indonesia di pasar global.
+
+Penelitian ini, dalam konteks ekspor kopi, memberikan wawasan yang lebih mendalam tentang variabel yang mempengaruhi jumlah kopi Indonesia yang diekspor ke Amerika Serikat. Hasil penelitian sebelumnya telah mengidentifikasi faktor-faktor seperti nilai tukar, harga kopi, dan pengaruh harga komoditas lainnya. Namun, penelitian ini menyoroti pentingnya praktik pertanian kopi dan komitmen petani terhadap kepunahan sebagai elemen kunci dalam meningkatkan ekspor kopi Indonesia.
+
+## Referensi
+
+Nopitriyani, S., Putri, M., Fauziyyah, N., & Prasaja, D. (2023). ANALISIS KOPI ORGANIK INDONESIA DI PASAR AMERIKA SERIKAT. Jurnal Economina, 2, 1--4. https://doi.org/10.55681/economina.v2i12.1044
+
+Safitri, K., & Movanita, N. (2022). Aceh Ekspor 18 Kontainer Kopi Arabica Gayo untuk Gerai Starbucks di AS dan. Kompas.Com. https://money.kompas.com/read/2021/06/18/085344726/aceh-ekspor-18-kontainer-kopi-arabica-gayo-untuk-gerai-starbucks-di-as-dan
+
+Indonesia, B. P. S. (n.d.). Ekspor Kopi Menurut Negara Tujuan Utama, 2000-2022---Tabel Statistik. Retrieved January 20, 2024, from https://www.bps.go.id/id/statistics-table/1/MTAxNCMx/ekspor-kopi-menurut-negara-tujuan-utama--2000-2022.html
+
+finaka, andrean. (n.d.). Provinsi Penghasil Kopi Terbesar \| Indonesia Baik. Retrieved January 20, 2024, from https://indonesiabaik.id/infografis/provinsi-penghasil-kopi-terbesar
